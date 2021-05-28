@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		
+		<title>Галарея</title>
+		
+		<link rel="stylesheet" href="/assets/css/icons.css">
+		<link rel="stylesheet" href="/assets/css/style.css">
+		
+		<script src="/assets/js/jquery.js"></script>
+		<script src="/assets/js/bootsrap.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div class="h-container">
+				<div class="h-inner">
+					<div class="h-block">
+						<a href="/" class="h-image">
+							<img src="/assets/img/logo.png" alt="logo">
+						</a>
+					</div>
+					<div class="h-addon">
+						<div class="direction hover" data-toggle="dropdown">
+							<i class="zmdi zmdi-more"></i>
+						</div>
+						<div class="dropdown fade">
+							<div class="dropdown-menu">
+								<a href="/reviews.html" class="menu">
+									<div class="menu-addon">
+										<div class="media">
+											<i class="zmdi zmdi-accounts-list-alt"></i>
+										</div>
+									</div>
+									<div class="menu-block">
+										<div class="document-heading">Відгуки</div>
+									</div>
+								</a>
+								<a href="/gallery.html" class="menu active">
+									<div class="menu-addon">
+										<div class="media">
+											<i class="zmdi zmdi-collection-image"></i>
+										</div>
+									</div>
+									<div class="menu-block">
+										<div class="document-heading">Галарея</div>
+									</div>
+								</a>
+								<a href="/about.html" class="menu">
+									<div class="menu-addon">
+										<div class="media">
+											<i class="zmdi zmdi-info"></i>
+										</div>
+									</div>
+									<div class="menu-block">
+										<div class="document-heading">Про нас</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="container">
+			<div class="card">
+				<div class="card-content">
+					<div class="card-addon">
+						<div class="media">
+							<i class="zmdi zmdi-collection-image"></i>
+						</div>
+					</div>
+					<div class="card-block">
+						<div class="document-publication">Галарея</div>
+					</div>
+				</div>
+				<div class="card-menu">
+					<div class="preview">
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img1.jpg', 'img1')">
+							<img src="/assets/img/gallery/img1_crop.jpg" alt="img1_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img2.jpg', 'img2')">
+							<img src="/assets/img/gallery/img2_crop.jpg" alt="img2_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img3.jpg', 'img3')">
+							<img src="/assets/img/gallery/img3_crop.jpg" alt="img3_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img4.jpg', 'img4')">
+							<img src="/assets/img/gallery/img4_crop.jpg" alt="img4_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img5.jpg', 'img5')">
+							<img src="/assets/img/gallery/img5_crop.jpg" alt="img5_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img6.jpg', 'img6')">
+							<img src="/assets/img/gallery/img6_crop.jpg" alt="img6_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img7.jpg', 'img7')">
+							<img src="/assets/img/gallery/img7_crop.jpg" alt="img7_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img8.jpg', 'img8')">
+							<img src="/assets/img/gallery/img8_crop.jpg" alt="img8_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img9.jpg', 'img9')">
+							<img src="/assets/img/gallery/img9_crop.jpg" alt="img9_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img10.jpg', 'img10')">
+							<img src="/assets/img/gallery/img10_crop.jpg" alt="img10_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img11.jpg', 'img11')">
+							<img src="/assets/img/gallery/img11_crop.jpg" alt="img11_crop">
+						</div>
+						<div class="preview-item hover" onclick="galleryOpenImage('/assets/img/gallery/img12.jpg', 'img12')">
+							<img src="/assets/img/gallery/img12_crop.jpg" alt="img12_crop">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="footer-text">СТАНЦІЯ ТЕХНІЧНОГО ОБСЛУГОВУВАННЯ</div>
+			<div class="footer-menu">
+				<div class="footer-item">
+					<a href="/contacts.html" class="link">Контакти</a>
+				</div>
+				<div class="footer-item">
+					<a href="/faq.html" class="link">FAQ</a>
+				</div>
+				<div class="footer-item">
+					<a href="/services.html" class="link">Послуги</a>
+				</div>
+				<div class="footer-item">
+					<a href="/vacancies.html" class="link">Ваканції</a>
+				</div>
+				<div class="footer-item">
+					<a href="/workers.html" class="link">Працівники</a>
+				</div>
+				<div class="footer-item">
+					<a href="/news.html" class="link">Новини</a>
+				</div>
+			</div>
+		</footer>
+		<script>
+			function galleryOpenImage(image, alt, addon, evaluate) {
+				var backdrop = $(document.createElement('div')).addClass('gallery-backdrop').appendTo('body');
+				var inner = $(document.createElement('div')).addClass('gallery-inner').appendTo('body');
+				var preview = $(document.createElement('div')).addClass('gallery-preview').appendTo('body');
+				
+				$(document).on('click', '.gallery-backdrop', function() {
+					galleryCloseImage();
+				});
+				
+				$('body').addClass('gallery-open');
+				
+				inner.html('<div class="gi-addon">\
+					<div class="direction hover" onclick="galleryCloseImage()">\
+						<i class="zmdi zmdi-arrow-left"></i>\
+					</div>\
+				</div>\
+				<div class="gi-block">\
+					<a href="' + image + '" target="_blank" class="direction">\
+						<i class="zmdi zmdi-download"></i>\
+					</a>\
+				</div>');
+				
+				preview.html('<img src="' + image + '" alt="' + alt + '">');
+				
+				$(document).on('click', '.gallery-preview img', function(e) {
+					if($('.gallery-preview').hasClass('in')) {
+						$('.gallery-preview').removeClass('in');
+					} else {
+						var top = $(this).offset().top;
+						var left = $(this).offset().left;
+						var height = $(this).height();
+						var width = $(this).width();
+						
+						$('.gallery-preview').addClass('in');
+						
+						$('.gallery-preview').scrollTop((e.pageY - top) * $(this).height() / height - window.innerHeight / 2);
+						$('.gallery-preview').scrollLeft((e.pageX - left) * $(this).width() / width - window.innerWidth / 2);
+					}
+				});
+			}
+			
+			function galleryCloseImage() {
+				$('body').removeClass('gallery-open');
+				
+				$(document).off('click', '.imageAddon');
+				$(document).off('click', '.gallery-backdrop');
+				$(document).off('click', '.gallery-preview img');
+				
+				$('.gallery-backdrop').remove();
+				$('.gallery-inner').remove();
+				$('.gallery-preview').remove();
+			}
+		</script>
+	</body>
+</html>
